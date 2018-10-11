@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterudacitybootcamp/Category.dart';
 
+// TODO: Pass this information into your custom [Category] widget
+const _categoryName = 'Cake';
+const _categoryIcon = Icons.cake;
+const _categoryColor = Colors.green;
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,19 +12,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Udacity BootCamp',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: new Text("Hello Udacity"),
+        debugShowCheckedModeBanner: false,
+        title: 'Udacity BootCamp',
+        theme: new ThemeData(
+          primarySwatch: Colors.blue,
         ),
-        body: new Rectangle(),
-      )
-     );
+        home: Builder(
+            builder: (context) => Scaffold(
+          appBar: AppBar(
+            title: Text("Hello Udacity"),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.cake),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Category(
+                              name: _categoryName,
+                              color: _categoryColor,
+                              iconData: _categoryIcon,
+                            )
+                    ),
+                  );
+                },
+              )
+            ],
+          ),
+          body: Rectangle(),
+        )
+    ),
+    );
   }
 }
+
 class Rectangle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -39,4 +65,3 @@ class Rectangle extends StatelessWidget {
     );
   }
 }
-
