@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudacitybootcamp/Category.dart';
 import 'package:flutterudacitybootcamp/CategoryRoute.dart';
+import 'Rectangle.dart';
 // TODO: Pass this information into your custom [Category] widget
 const _categoryName = 'Cake';
 const _categoryIcon = Icons.cake;
@@ -56,22 +57,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Rectangle extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.greenAccent,
-        height: 400.0,
-        width: 300.0,
-        child: Center(
-          child: Text(
-            'Hello BootCamp',
-            style: TextStyle(fontSize: 30.0),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
-}
+
