@@ -18,8 +18,6 @@ class Category extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.teal,
-      shadowColor: Colors.transparent,
       child: Container(
         height: _rowHeight,
         child: InkWell(
@@ -53,8 +51,6 @@ class Category extends StatelessWidget{
           ),
         ),
       ),
-
-
     );
   }
 }

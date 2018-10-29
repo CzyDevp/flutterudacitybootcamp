@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterudacitybootcamp/Category.dart';
-
+import 'package:flutterudacitybootcamp/CategoryRoute.dart';
 // TODO: Pass this information into your custom [Category] widget
 const _categoryName = 'Cake';
 const _categoryIcon = Icons.cake;
@@ -20,10 +20,20 @@ class MyApp extends StatelessWidget {
         home: Builder(
             builder: (context) => Scaffold(
           appBar: AppBar(
-            title: Text("Hello Udacity"),
+            elevation: 0.0,
+            backgroundColor: Colors.green[100],
+            centerTitle: true,
+            title: Text("Unit Converter",
+              style:TextStyle(
+                  fontSize:30.0,
+                  color: Colors.black),
+            ),
             actions: <Widget>[
               IconButton(
-                icon: Icon(Icons.cake),
+                icon: Icon(
+                  Icons.cake,
+                  color: Colors.black,
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
